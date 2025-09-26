@@ -4,7 +4,7 @@ from openai import OpenAI
 import gradio as gr
 from google.colab import userdata
 
-apikey = os.getenv('OPENAI_API_KEY')
+apikey = userdata.get('OPENAI_API_KEY')
 client = OpenAI(api_key=apikey)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
