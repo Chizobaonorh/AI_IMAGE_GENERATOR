@@ -1,7 +1,7 @@
-🎨 AI Image Generator with Smart Prompt Enhancement
+## 🎨 AI Image Generator with Smart Prompt Enhancement
 An intelligent image generation system that uses OpenAI to optimize your prompts before creating stunning images with Stable Diffusion. Describe your idea in natural language, and let the AI handle the technical prompt engineering for you!
 
-✨ Features
+###✨ Features
 🤖 Smart Prompt Enhancement: OpenAI analyzes your description and creates optimized prompts for image generation
 
 🎯 Quality-Focused: Automatic negative prompt generation to avoid common artifacts and low-quality elements
