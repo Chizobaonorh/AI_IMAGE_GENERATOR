@@ -62,8 +62,8 @@ def generate_image_from_input(message):
         negative_prompt = "blurry, low quality, ugly, deformed, multiple people, duplicate body"
         result = f"PROMPT: {prompt}\nNEGATIVE_PROMPT: {negative_prompt}"
     
-    print(f"📝 Enhanced Prompt: {prompt}")
-    print(f"🚫 Negative Prompt: {negative_prompt}")
+    print(f"Enhanced Prompt: {prompt}")
+    print(f"Negative Prompt: {negative_prompt}")
     
     print("🎨 Generating image...")
     image = pipe(
@@ -76,7 +76,6 @@ def generate_image_from_input(message):
         generator=torch.Generator(device=device).manual_seed(42)
     ).images[0]
     
-    print("✅ Image generated successfully!")
     
     return image, prompt, negative_prompt, result
 
@@ -140,5 +139,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         outputs=[image_output, enhanced_prompt_display, negative_prompt_display, raw_prompts_display]
     )
 
-print("🚀 Launching Gradio Interface...")
 demo.launch(share=True, debug=True)
