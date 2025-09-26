@@ -47,7 +47,6 @@ def chat(message, history=None):
     return response.choices[0].message.content
 
 def generate_image_from_input(message):
-    """Main function: Takes user input → OpenAI enhancement → Image generation"""
     
     print("🔄 Enhancing prompts with OpenAI...")
     result = chat(message, None)
@@ -62,8 +61,6 @@ def generate_image_from_input(message):
         negative_prompt = "blurry, low quality, ugly, deformed, multiple people, duplicate body"
         result = f"PROMPT: {prompt}\nNEGATIVE_PROMPT: {negative_prompt}"
     
-    print(f"Enhanced Prompt: {prompt}")
-    print(f"Negative Prompt: {negative_prompt}")
     
     print("🎨 Generating image...")
     image = pipe(
